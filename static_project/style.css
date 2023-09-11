@@ -1,0 +1,177 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Serif&family=Lemonada:wght@300&family=Oranienbaum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Serif&family=Lemonada:wght@300&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Serif&family=Lemonada:wght@300&family=Merriweather:wght@300&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&family=Poppins:wght@300&family=Secular+One&display=swap");
+
+body {
+  background: #1b1b9d;
+  background: radial-gradient(circle, #121269 0%, #1d1b31 100%);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: white !important;
+}
+.w-75 {
+  width: 80% !important;
+}
+.card {
+  background: #2E4B96;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid #2E4B96;
+  color: white !important;
+}
+.card-title {
+  font-family: "Poppins", sans-serif;
+}
+.fas{
+ color: white;
+}
+.card-text {
+  font-family: "Poppins", sans-serif;
+}
+.text-end {
+  font-family: "Poppins", sans-serif;
+}
+a:hover {
+  text-decoration: underline;
+  font-weight: 1.3rem;
+}
+
+/* pagiantion */
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pages{
+  /* background-color: white; */
+  background: rgb(187 184 196 / 97%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  /* color: white !important; */
+}
+
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid rgb(7, 6, 6);
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #2E4B96;
+  color: white;
+  /* border: 1px solid #4CAF50; */
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+@media (min-width: 576px) {
+  .card-img-top {
+    height: 400px;
+  }
+}
+@media (min-width: 768px) {
+  .card-img-top {
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 300px;
+  }
+}
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 200px;
+  }
+  .container {
+    padding-left: 0px;
+  }
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  padding: 0px 20px;
+  /* background-color: #141364; */
+  position: relative;
+  justify-content: space-between;
+  z-index: 999!important;
+}
+.nav > .nav-header {display: inline;}
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+.nav > .nav-btn {display: none;}
+.nav > .nav-links {display: inline;float: right;font-size: 18px;}
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+.nav > .nav-links > a:hover {background-color: rgba(0, 0, 0, 0.3);}
+.nav > #nav-check {display: none;}
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    /* background-color: rgba(0, 0, 0, 0.3); */
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    /* background-color: #1C1A39; */
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {display: block;width: 100%;}
+  .nav > #nav-check:not(:checked) ~ .nav-links {height: 0px;}
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
